@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: Karla;
+    src: url(./fonts/Karla-VariableFont_wght.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    margin: 0;
+    font-family: Karla, sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main{
+    padding: 36px;
 }
 
-.App-link {
-  color: #61dafb;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 96px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: #FFFFFF;
+    padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header--content{
+    display: flex;
+    align-items: center;
+}
+
+.header--logo{
+    width: 45px;
+    height: 36px;
+    margin-right: 7px;
+}
+
+.header--description{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.header--title{
+    font-size: 31px;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+}
+
+.form--inputs{
+    font-family: Karla, sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form--button{
+    grid-column: 1 / -1;
+    font-family: Karla, sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.form--button > p{
+    margin-left: 40%;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.meme--icon{
+    height: 19px;
+    width: 19px;
+    margin-left: 7px;
 }

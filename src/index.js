@@ -1,17 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+// import App from './App'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function App(){
+    const [things, setThings] = React.useState(["Thing 1", "Thing 2"])
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+     function addAnotherThing(){
+        const newThing = `Thing ${things.length + 1}`
+        setThings(prevState => [...prevState, newThing])
+    }
+
+    const items = things.map(item =><p>{item}</p>)
+
+    return(
+        <div>
+            {/* using events listeners for mouse */}
+            <button onClick={addAnotherThing}>Add Item</button>
+            <p>{items}</p>
+        </div>
+    )
+}
+
+ReactDOM.render(<App />,  
+document.getElementById("root"))
